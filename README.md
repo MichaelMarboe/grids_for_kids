@@ -4,4 +4,4 @@ GridsForKids is a fun lander page for a kids activity catalogue. Using Lottie Pl
 
 Technically, the page will use the control script to initiliaze an animation cycle, picking 4 different animations to play at random every 5 seconds. All assets and animations scale indefinitely. 
 
-View at: (https://michaelmarboe.github.io/grids_for_kids/)
+View at: https://michaelmarboe.github.io/grids_for_kids/

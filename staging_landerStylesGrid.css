@@ -1,0 +1,373 @@
+*{
+    margin:0;
+    padding:0px;
+    border:none;
+    border-style:none;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;    
+}
+
+#background-cover{
+    position:absolute;
+    
+    background-color: black;
+    opacity:0;
+    height:100%;
+}
+
+#container{
+    max-width:900px;
+    border-radius:15px;
+    overflow:hidden;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+}
+
+.animBox{
+    overflow: hidden;
+}
+
+.devControls{
+    display:inline-block;
+}
+
+.devButton{
+    width:200px;
+    height:50px;
+    background-color: #45aaf2;
+    color:white;
+    margin:5px;
+    cursor: pointer;
+}
+
+#devTools{
+    justify-content: center;
+    width:100%;
+    background-color: black;
+    color:white;
+}
+
+.placeholder:hover{
+    opacity: 0.5;
+}
+
+.hover-effect{
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.hover-effect:hover{ opacity:0.6 };
+
+.devButton:hover{
+    opacity:0.7;
+}
+
+/* --- CORNER ROUNDING --- */
+
+.round-top-left{
+    border-radius: 15px 0px 0px 0px;
+}
+
+.round-top-right{
+    border-radius: 0px 15px 0px 0px;
+}
+
+.round-bottom-right{
+    border-radius: 0px 0px 15px 0px;
+}
+
+.round-bottom-left{
+    border-radius: 0px 0px 0px 15px;
+}
+
+.round-bottom{
+    border-radius: 0px 0px 15px 15px;
+}
+
+/* --- COLORS --- */
+
+/* Scheme 1 */
+
+.gray{
+    background-color: #34495e;
+}
+
+.blue{
+    background-color: #45aaf2;
+}
+
+.purple{
+    background-color: #8963aa;
+}
+
+.red{
+    background-color: #e74c3c;
+}
+
+.orange{
+    background-color: #fd9644;
+}
+
+.green{
+    background-color: #20bf6b;
+}
+
+.yellow{
+    background-color: #f1c40f;
+}
+
+.bluegray{
+    background-color: #778CA3;
+}
+
+/* Scheme 2 */
+
+.blue2{
+    background-color: #4b7bec;
+}
+
+.green2{
+    background-color: #26de81;
+}
+
+.red2{
+    background-color: #eb3b5a;
+}
+
+.purple2{
+    background-color: #a55eea;
+}
+
+.turquoise2{
+    background-color: #2bcbba;
+}
+
+.orange2{
+    background-color: #fa8231;
+}
+
+.grey2{
+    background-color: #778ca3;
+}
+
+.nullgrey{
+    background-color: #ecf0f1;
+}
+
+/* Just for Safari - prevents odd stretching when gap is enabled */
+.container-child {
+    height:100%;
+}
+
+.container-child:hover{
+    cursor: pointer;
+}
+
+.fade-in { animation: fadeIn 2s; }
+
+.empty{
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+@media only screen and (max-width: 640px){
+    #letters{
+        content: url(bogstaver_knap2/data.json);
+    }
+
+    /* 300 x 225 */
+    #container{
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-gap:0px;
+    }
+
+    #item1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+
+    #item2 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    #item3 {
+        display:none;
+    }
+
+    #item4 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    #item5 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #item6 {
+       grid-column-start: 3;
+       grid-column-end: 3;
+       grid-row-start:3;
+       grid-row-end: 3;
+    }
+
+    #item7 {
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+
+    #item8 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #item9 {
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    #item10 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+
+    #item11 {
+        grid-column: 2;
+        grid-column-end: 4;
+        grid-row-start: 6;
+        grid-row-end: 6;
+    }
+
+    /* corner-radius adjustments; must select children of item (ie. the players, animBox) */
+    #item4 > *{
+        border-radius: 0px;
+    }
+    
+    #item6 > *{
+        border-radius: 0px;
+    }
+}
+
+@media only screen and (min-width: 641px){
+    /* 300 x 225 */
+    #container{
+        width: 85%;
+        height:auto;
+        display:grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+        grid-gap:0px;
+    }
+
+    #item1{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 1;
+        /* Centered background image can be added like this:
+        background-image: url("/Backgrounds/dyr-bg.png");
+        background-size: contain; */
+    }   
+    
+    #item2{
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    
+    #item3{
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 1;
+    }
+    
+    #item4{
+        border-radius: 15px;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 2;
+        grid-row-end: 4;
+    }
+    
+    #item5{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    #item6{
+        grid-column-start: 4;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 2;
+    }
+    
+    #item7{
+        grid-column-start: 2;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+    
+    #item8{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 3;
+    }
+    
+    #item9{
+        grid-column-start: 1;
+        grid-column-end: 1;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+    
+    #item10{
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 4;
+        grid-row-end: 4;
+    }
+
+    #item11{
+        grid-column: 2;
+        grid-column-end: 4;
+        grid-row-start: 5;
+        grid-row-end: 5;
+    }
+}

@@ -1,0 +1,57 @@
+<!--- NB: THIS IS STAGING FILE, ONLY LIVE ON GITHUB PAGES -->
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="staging_landerStylesGrid.css"/>
+    <script src="staging_animationControl.js" defer></script>
+</head>
+
+<body>
+    <div class="container" id="devTools" style="display:none">
+        <button id="devModeButton" class="devControls devButton" onclick="enableClickToPlay()">Enable click to play</button>
+        <button class="devControls devButton" onclick="gapToggler()">Toggle gap</button>
+    </div>
+    <div id="background-cover"></div>
+    <div id="container" class="fade-in center">
+        <div id="item1" onclick="launch('item1', '')" class="container-child dyr hover-effect">
+            <lottie-player class="animBox green2" src="dyr_knap/dyr_max.json" background="transparent"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item2" onclick="launch('item2', 'https://danes.instructure.com/courses/881/pages/dyr-velkommen?module_item_id=61891')" class="container-child transport hover-effect">
+            <lottie-player class="animBox red2 round-top-right" src="transport_knap/data.json"  background="transparent"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item3" class="container-child empty">
+            <lottie-player class="animBox" src="teddy_null/data.json"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item4" onclick="launch('item4', 'https://danes.instructure.com/courses/881/modules/items/61951')" class="container-child familie-venner hover-effect">
+            <lottie-player class="animBox turquoise2 round-bottom-left" src="familievenner_knap/data.json"  background="transparent"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item5" onclick="launch('item5', 'https://danes.instructure.com/courses/881/modules/items/61933')" class="container-child natur-vejr hover-effect">
+            <lottie-player class="animBox blue2" src="naturvejr_knap/data.json"  background="transparent"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item6" onclick="launch('item6', 'https://danes.instructure.com/courses/881/modules/items/61915')" class="container-child mad hover-effect" onclick="playOnClick(event)">
+            <lottie-player class="animBox orange2 round-top-right" style="overflow:hidden" src="mad_knap/data.json"  background="transparent"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item7" onclick="launch('item7', 'https://danes.instructure.com/courses/881/modules/items/61906')" class="container-child krop-toej hover-effect">
+            <lottie-player class="animBox purple2" src="toej_knap/data.json"  background="transparent"  speed="1"></lottie-player>
+        </div>
+
+        <div id="item8" onclick="launch('item8', 'https://danes.instructure.com/courses/881/modules/items/61942')" class="container-child hus-have hover-effect">
+            <lottie-player class="animBox green2" src="farver_knap/data.json"  background="transparent"  speed="1" ></lottie-player>
+        </div>
+
+        <div id="item9" class="container-child star" style="pointer-events: none;">
+            <lottie-player class="animBox" src="star_null/data.json" speed="1" ></lottie-player>
+        </div>
+
+        <div id="item10" onclick="launch('item10', 'https://danes.instructure.com/courses/881/modules/items/61924')" class="container-child hverdag hover-effect">
+            <lottie-player class="animBox grey2 round-bottom-right" src="hverdag_knap/data.json"  background="transparent"  speed="1" ></lottie-player>
+        </div>
+    </div>
+</body>
